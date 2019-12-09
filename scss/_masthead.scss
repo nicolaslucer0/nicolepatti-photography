@@ -1,0 +1,159 @@
+.header-home {
+  padding: 1em !important;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.637),
+    transparent
+  ) !important;
+
+  .nav-link-home {
+    font-weight: lighter;
+  }
+
+  .nav-link-home {
+    letter-spacing: 0;
+    transition: 0.5s;
+    padding-right: 10px;
+  }
+
+  .nav-link-home:hover {
+    font-weight: bold;
+  }
+
+  .nav-link-home:after,
+  .nav-link-home:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  .nav-link-home:hover:after,
+  .nav-link-home:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+
+  .nav-link-home:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }
+}
+
+.header-rest {
+  padding: 1em !important;
+  background: white;
+  .nav-link-rest {
+    font-weight: lighter;
+  }
+
+  .nav-link-rest {
+    letter-spacing: 0;
+    transition: 0.5s;
+    padding-right: 10px;
+  }
+
+  .nav-link-rest:hover {
+    font-weight: bold;
+  }
+
+  .nav-link-rest:after,
+  .nav-link-rest:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#000, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  .nav-link-rest:hover:after,
+  .nav-link-rest:hover:before {
+    backface-visibility: hidden;
+    border-color: #000;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+
+  .nav-link-rest:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }
+}
+
+header.masthead {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: $gray-800;
+  background: url("../img/landscape.jpg") no-repeat center center;
+  @include background-cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  height: 100vh;
+  .overlay {
+    position: absolute;
+    background-color: $black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  .main-title {
+    font-size: 3rem;
+    font-weight: normal;
+    text-shadow: 0 0 18px black;
+  }
+
+  .subtitle {
+    font-weight: lighter;
+    font-size: 2em;
+  }
+}
+
+.logo {
+  width: 8em;
+}
+
+.crystal {
+  position: absolute;
+  height: 18vh;
+  width: 100vw;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+.blur-name {
+  height: 30vh;
+  align-items: center;
+  border: 1px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.blur-name:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
