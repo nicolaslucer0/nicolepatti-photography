@@ -1,7 +1,50 @@
-.gallery{
-    margin: 10em 0;
+.card:hover{
+  cursor: pointer;
 }
 
+.main-title {
+  text-align: center;
+  margin: 3em 0 1em 0;
+  font-weight: lighter;
+  transition: .3s;
+}
+
+.main-title {
+  letter-spacing: 0;
+  transition: 0.5s;
+  padding-right: 10px;
+}
+
+.main-title:hover{
+  font-weight: normal;
+}
+
+.main-title:after,
+.main-title:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#000, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.main-title:hover:after,
+.main-title:hover:before {
+  backface-visibility: hidden;
+  border: 1px solid pink;
+  transition: width 350ms ease-in-out;
+  width: 80%;
+}
+
+.main-title:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 80%;
+}
 
 .hovereffect {
   width: 100%;
@@ -20,13 +63,13 @@
   height: 80%;
   left: 10%;
   top: 10%;
-  border-bottom: 1px solid #FFF;
-  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0,1);
-  -ms-transform: scale(0,1);
-  transform: scale(0,1);
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
 }
 
 .hovereffect:hover .overlay {
@@ -56,30 +99,33 @@
   position: relative;
   font-size: 17px;
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,-100%,0);
-  transform: translate3d(0,-100%,0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
-.hovereffect a, .hovereffect p {
-  color: #FFF;
+.hovereffect a,
+.hovereffect p {
+  color: #fff;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 
-.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+.hovereffect:hover a,
+.hovereffect:hover p,
+.hovereffect:hover h2 {
   opacity: 1;
   filter: alpha(opacity=100);
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
