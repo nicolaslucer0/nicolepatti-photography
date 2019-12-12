@@ -277,13 +277,13 @@ footer.footer {
   -o-object-fit: cover;
   object-fit: cover;
   vertical-align: bottom;
-  transition: .3s;
+  transition: 0.3s;
   padding: 2px;
   overflow: hidden;
 }
 
-.flex-gallery img:hover {
-  transform: scale(1.1);
+.flex-gallery .flex-image:hover {
+  transform: scale(1.03);
   cursor: pointer;
 }
 
@@ -312,6 +312,49 @@ footer.footer {
     max-height: 75vh;
     min-width: 0;
   }
+}
+
+.flex-gallery #exampleModal {
+  background: rgba(0, 0, 0, 0.829);
+}
+
+.flex-gallery #exampleModal .close {
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  font-size: 40px;
+  background: black;
+  color: white;
+  width: 4%;
+  font-weight: lighter;
+}
+
+.flex-gallery #exampleModal .close:hover {
+  font-weight: bold;
+}
+
+.flex-gallery .show {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-gallery .modal-content {
+  width: 100% !important;
+}
+
+.flex-gallery .modal-dialog {
+  display: flex;
+  max-width: none !important;
+  margin: 0 auto !important;
+  width: auto;
+  height: 100vh;
+}
+
+.flex-gallery .modal-img {
+  width: 60%;
+  margin: auto;
+  min-width: auto;
 }
 
 .card:hover {
