@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Landing Page v5.0.7 (https://startbootstrap.com/template-overviews/landing-page)
- * Copyright 2013-2019 Start Bootstrap
+ * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
@@ -72,7 +72,7 @@ h6 {
 }
 
 .header-rest .nav-link-rest {
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .header-rest .nav-link-rest {
@@ -145,6 +145,11 @@ header.masthead .home-title {
 header.masthead .subtitle {
   font-weight: lighter;
   font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.logo-home {
+  width: 10em;
 }
 
 .logo {
@@ -162,8 +167,11 @@ header.masthead .subtitle {
   z-index: 1;
 }
 
+.main-col {
+  padding: 2em 2em 0 2em;
+}
+
 .blur-name {
-  height: 30vh;
   align-items: center;
   border: 1px;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
@@ -180,6 +188,37 @@ header.masthead .subtitle {
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
+}
+
+.btn-1 {
+  background: transparent;
+  font-weight: 100;
+  color: white;
+  border: 1px solid #ffa7b6;
+  margin-top: 2em;
+}
+
+.btn-1:hover {
+  background: #ffa7b6;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .btn {
+    margin: 0 1em 2em;
+  }
 }
 
 .showcase .showcase-text {
@@ -250,60 +289,69 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
-.flex-gallery ul {
+.flex-gallery .container {
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-gallery .container .item {
   display: flex;
   flex-wrap: wrap;
   -webkit-padding-start: 0 !important;
   padding-inline-start: 0 !important;
   padding: 0;
   margin: 0;
-  width: 90%;
-  margin: auto;
+  overflow: hidden;
 }
 
-.flex-gallery li {
+.flex-gallery .container .item a {
   height: 40vh;
-  flex-grow: 1;
   list-style: none;
+  width: auto;
+  flex-grow: 1;
 }
 
-.flex-gallery li:last-child {
+.flex-gallery .container .item a:last-child {
   flex-grow: 10;
 }
 
-.flex-gallery img {
-  max-height: 100%;
-  min-width: 100%;
+.flex-gallery .container .item a img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   vertical-align: bottom;
-  transition: 0.3s;
+  transition: 1s;
   padding: 2px;
   overflow: hidden;
 }
 
 .flex-gallery .flex-image:hover {
-  transform: scale(1.03);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+  transform: scale(1.2);
+  opacity: 0.8;
   cursor: pointer;
 }
 
 @media (max-aspect-ratio: 1 / 1) {
-  .flex-gallery li {
+  .flex-gallery a {
     height: 30vh;
   }
 }
 
 @media (max-height: 480px) {
-  .flex-gallery li {
+  .flex-gallery a {
     height: 80vh;
   }
 }
 
 @media (max-aspect-ratio: 1 / 1) and (max-width: 480px) {
-  .flex-gallery ul {
+  .flex-gallery .item {
     flex-direction: row;
   }
-  .flex-gallery li {
+  .flex-gallery a {
     height: auto;
     width: 100%;
   }
@@ -357,6 +405,10 @@ footer.footer {
   min-width: auto;
 }
 
+.full-image img {
+  pointer-events: none !important;
+}
+
 .card:hover {
   cursor: pointer;
 }
@@ -364,7 +416,7 @@ footer.footer {
 .main-title {
   text-align: center;
   margin: 3em 0 1em 0;
-  font-weight: lighter;
+  font-weight: 300;
   transition: .3s;
 }
 
@@ -372,10 +424,6 @@ footer.footer {
   letter-spacing: 0;
   transition: 0.5s;
   padding-right: 10px;
-}
-
-.main-title:hover {
-  font-weight: normal;
 }
 
 .main-title:after,
@@ -478,4 +526,93 @@ footer.footer {
   opacity: 1;
   filter: alpha(opacity=100);
   transform: translate3d(0, 0, 0);
+}
+
+#contact nav {
+  position: fixed;
+  background: white;
+}
+
+#contact .contact-description {
+  background: url("/img/galeria/2/23.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+#contact .black-cover {
+  background: #000000d5;
+  padding: 6em 2em 2em 2em;
+}
+
+#contact .card {
+  border-radius: 9px;
+  transition: .5s;
+}
+
+#contact .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 11px 0px #00000052;
+}
+
+#contact .card .card-footer {
+  border-radius: 0 0 9px 9px;
+  padding: 0;
+}
+
+#contact .text-left {
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+#contact .button {
+  padding: 1em;
+  justify-content: center;
+  display: flex;
+  color: white;
+  border-radius: 0 0 9px 9px;
+  text-decoration: none;
+}
+
+#contact .button:hover {
+  text-decoration: none !important;
+}
+
+#contact .button-whatsapp {
+  background: #008051;
+  background: -webkit-gradient(left bottom, right top, color-stop(38%, #008051), color-stop(74%, #005032), color-stop(99%, #002f1d), color-stop(100%, #002e1c));
+  background: linear-gradient(45deg, #008051 38%, #005032 74%, #002f1d 99%, #002e1c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008051', endColorstr='#002e1c', GradientType=1 );
+}
+
+#contact .button-whatsapp:hover {
+  background: #0c4631;
+}
+
+#contact .button-gmail {
+  background: #b60000;
+  background: linear-gradient(90deg, #b60000 0%, #540000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b60000",endColorstr="#540000",GradientType=1);
+}
+
+#contact .button-gmail:hover {
+  background: #700000;
+}
+
+#contact .button-instagram {
+  background: #fed975;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #fed975), color-stop(14%, #fa7e1e), color-stop(28%, #d62977), color-stop(80%, #962fbf), color-stop(95%, #4f5ad5), color-stop(99%, #4f5ad5));
+  background: linear-gradient(135deg, #fed975 0%, #fa7e1e 14%, #d62977 28%, #962fbf 80%, #4f5ad5 95%, #4f5ad5 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed975', endColorstr='#4f5ad5', GradientType=1 );
+}
+
+#contact .button-instagram:hover {
+  background: #fed975;
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #fed975), color-stop(14%, #fa7e1e), color-stop(28%, #d62977), color-stop(80%, #962fbf), color-stop(95%, #4f5ad5), color-stop(99%, #4f5ad5));
+  background: linear-gradient(45deg, #fed975 0%, #fa7e1e 14%, #d62977 28%, #962fbf 80%, #4f5ad5 95%, #4f5ad5 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed975', endColorstr='#4f5ad5', GradientType=1 );
 }

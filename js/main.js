@@ -15,7 +15,4 @@ $(document).ready(function(){
         return false;
      });
 
-      $(".modal").on("contextmenu",function(){
-        return false;
-     });
 });

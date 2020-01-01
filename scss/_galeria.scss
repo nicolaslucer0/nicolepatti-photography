@@ -1,37 +1,45 @@
 .flex-gallery {
-  ul {
+  .container {
+    height: 120px;
     display: flex;
     flex-wrap: wrap;
-    padding-inline-start: 0 !important;
-    padding: 0;
-    margin: 0;
-    width: 90%;
-    margin: auto;
+    justify-content: center;
+    .item {
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-padding-start: 0 !important;
+      padding-inline-start: 0 !important;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      a {
+        height: 40vh;
+        list-style: none;
+        width: auto;
+        flex-grow: 1;
+        &:last-child {
+          // There's no science in using "10" here. In all my testing, this delivered the best results.
+          flex-grow: 10;
+        }
+        
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: bottom;
+          transition: 1s;
+          padding: 2px;
+          overflow: hidden;
+        }
+      }
+    }
   }
-
-  li {
-    height: 40vh;
-    flex-grow: 1;
-    list-style: none;
-  }
-
-  li:last-child {
-    // There's no science in using "10" here. In all my testing, this delivered the best results.
-    flex-grow: 10;
-  }
-
-  img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-    transition: 0.3s;
-    padding: 2px;
-    overflow: hidden;
-  }
-
-  .flex-image:hover {
-    transform: scale(1.03);
+  
+  
+.flex-image:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    transform: scale(1.2);
+    opacity: 0.8;
     cursor: pointer;
   }
 
@@ -40,7 +48,7 @@
   // Portrait
 
   @media (max-aspect-ratio: 1/1) {
-    li {
+    a {
       height: 30vh;
     }
   }
@@ -48,7 +56,7 @@
   // Short screens
 
   @media (max-height: 480px) {
-    li {
+    a {
       height: 80vh;
     }
   }
@@ -56,11 +64,11 @@
   // Smaller screens in portrait
 
   @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-    ul {
+    .item {
       flex-direction: row;
     }
 
-    li {
+    a {
       height: auto;
       width: 100%;
     }
@@ -114,3 +122,8 @@
   }
 }
 
+.full-image{
+  img {
+    pointer-events: none !important;
+  }
+}
