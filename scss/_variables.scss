@@ -1,5 +1,13 @@
 // Variables
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../font/quicksand.ttf) format('truetype');
+}
 
+@font-face {
+    font-family: 'Inria';
+    src: url(../font/InriaSerif-Regular.ttf) format('truetype');
+}
 // Restated Bootstrap Variables
 
 $white: #fff !default;

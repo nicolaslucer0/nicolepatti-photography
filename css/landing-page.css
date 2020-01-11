@@ -4,17 +4,26 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/quicksand.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Inria';
+  src: url(../font/InriaSerif-Regular.ttf) format("truetype");
+}
+
 body {
-  font-family: 'muli', 'raleway', Arial, sans-serif;
+  font-family: 'Inri', 'Quicksand', 'muli', Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
-  font-family: 'muli', 'raleway', Arial, sans-serif;
+  font-family: 'Inri', 'Quicksand', 'muli', Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -31,6 +40,7 @@ h6 {
   letter-spacing: 0;
   transition: 0.5s;
   padding-right: 10px;
+  font-family: 'Quicksand';
 }
 
 .header-home .nav-link-home:hover {
@@ -79,6 +89,7 @@ h6 {
   letter-spacing: 0;
   transition: 0.5s;
   padding-right: 10px;
+  font-family: 'Quicksand';
 }
 
 .header-rest .nav-link-rest:hover {
@@ -149,7 +160,8 @@ header.masthead .subtitle {
 }
 
 .logo-home {
-  width: 10em;
+  width: 30em;
+  margin-bottom: 1em;
 }
 
 .logo {
@@ -409,6 +421,10 @@ footer.footer {
   pointer-events: none !important;
 }
 
+.card {
+  font-family: 'Inria' !important;
+}
+
 .card:hover {
   cursor: pointer;
 }
@@ -534,7 +550,7 @@ footer.footer {
 }
 
 #contact .contact-description {
-  background: url("/img/galeria/2/23.jpg") no-repeat center center;
+  background: url("../img/galeria/2/23.JPG") no-repeat center center;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -563,6 +579,7 @@ footer.footer {
 }
 
 #contact .text-left {
+  font-family: Raleway;
   line-height: 35px;
   font-size: 20px;
   font-weight: 200;

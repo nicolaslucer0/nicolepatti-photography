@@ -13,6 +13,7 @@
     letter-spacing: 0;
     transition: 0.5s;
     padding-right: 10px;
+    font-family: 'Quicksand';
   }
 
   .nav-link-home:hover {
@@ -58,6 +59,7 @@
     letter-spacing: 0;
     transition: 0.5s;
     padding-right: 10px;
+    font-family: 'Quicksand';
   }
 
   .nav-link-rest:hover {
@@ -125,7 +127,8 @@ header.masthead {
 }
 
 .logo-home {
-  width: 10em;
+  width: 30em;
+  margin-bottom: 1em;
 }
 
 .logo {
