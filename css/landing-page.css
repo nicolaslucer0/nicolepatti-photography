@@ -39,19 +39,19 @@ h6 {
 .header-home .nav-link-home {
   letter-spacing: 0;
   transition: 0.5s;
-  padding-right: 10px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
+  margin-right: 20px;
+  font-size: 19px;
 }
 
 .header-home .nav-link-home:hover {
   font-weight: bold;
 }
 
-.header-home .nav-link-home:after,
-.header-home .nav-link-home:before {
+.header-home .nav-link-home:after {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   bottom: 0px;
   content: " ";
   display: block;
@@ -88,19 +88,19 @@ h6 {
 .header-rest .nav-link-rest {
   letter-spacing: 0;
   transition: 0.5s;
-  padding-right: 10px;
-  font-family: 'Quicksand';
+  margin-right: 20px;
+  font-size: 19px;
+  font-family: "Quicksand";
 }
 
 .header-rest .nav-link-rest:hover {
   font-weight: bold;
 }
 
-.header-rest .nav-link-rest:after,
-.header-rest .nav-link-rest:before {
+.header-rest .nav-link-rest:after {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid black;
   bottom: 0px;
   content: " ";
   display: block;
@@ -130,7 +130,7 @@ header.masthead {
   align-items: center;
   position: relative;
   background-color: #343a40;
-  background: url("../img/landscape.jpg") no-repeat center center;
+  background: url("../img/galeria/2/22.JPG") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -160,7 +160,7 @@ header.masthead .subtitle {
 }
 
 .logo-home {
-  width: 30em;
+  width: 25em;
   margin-bottom: 1em;
 }
 
@@ -172,11 +172,10 @@ header.masthead .subtitle {
   position: absolute;
   height: 18vh;
   width: 100vw;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  box-shadow: none;
   z-index: 1;
+  border: none;
+  border-radius: 0;
 }
 
 .main-col {
@@ -185,33 +184,35 @@ header.masthead .subtitle {
 
 .blur-name {
   align-items: center;
-  border: 1px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, 0.5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  border: none;
+  border: 1px solid #8080801a;
+  box-shadow: 0px 2px 7px 0px #00000033;
+  border-radius: 30px;
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background: #00000059;
 }
 
 .blur-name:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px #427388;
+  align-items: center;
+  border: none;
+  border: 1px solid white;
+  box-shadow: 0px 2px 7px 0px #00000033;
+  border-radius: 30px;
+  transition: 0.5s;
 }
 
 .btn-1 {
   background: transparent;
   font-weight: 100;
-  color: white;
-  border: 1px solid #ffa7b6;
+  background: #ffffff38;
+  color: black !important;
   margin-top: 2em;
 }
 
 .btn-1:hover {
-  background: #ffa7b6;
+  background: #ffffff60;
 }
 
 .btn {
@@ -431,7 +432,7 @@ footer.footer {
 
 .main-title {
   text-align: center;
-  margin: 3em 0 1em 0;
+  margin: 0 0 1em 0;
   font-weight: 300;
   transition: .3s;
 }
@@ -494,10 +495,19 @@ footer.footer {
   transform: scale(0, 1);
 }
 
-.hovereffect:hover .overlay {
+.hovereffect .overlay {
   opacity: 1;
   filter: alpha(opacity=100);
   transform: scale(1);
+}
+
+.hovereffect:hover img {
+  -webkit-filter: brightness(0.2);
+  filter: brightness(0.2);
+}
+
+.hovereffect:hover .card-title {
+  color: pink;
 }
 
 .hovereffect img {
@@ -506,7 +516,7 @@ footer.footer {
   transition: all 0.35s;
 }
 
-.hovereffect:hover img {
+.hovereffect img {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
   filter: brightness(0.6);
   -webkit-filter: brightness(0.6);
@@ -536,36 +546,17 @@ footer.footer {
   transform: translate3d(0, 100%, 0);
 }
 
-.hovereffect:hover a,
-.hovereffect:hover p,
-.hovereffect:hover h2 {
+.hovereffect a,
+.hovereffect p,
+.hovereffect h2 {
   opacity: 1;
   filter: alpha(opacity=100);
   transform: translate3d(0, 0, 0);
 }
 
-#contact nav {
-  position: fixed;
-  background: white;
-}
-
-#contact .contact-description {
-  background: url("../img/galeria/2/23.JPG") no-repeat center center;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0;
-}
-
-#contact .black-cover {
-  background: #000000d5;
-  padding: 6em 2em 2em 2em;
-}
-
 #contact .card {
   border-radius: 9px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #contact .card:hover {
@@ -573,9 +564,24 @@ footer.footer {
   box-shadow: 0 10px 11px 0px #00000052;
 }
 
+#contact .card .card-header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
 #contact .card .card-footer {
   border-radius: 0 0 9px 9px;
   padding: 0;
+}
+
+#contact .info-img {
+  border-radius: 50px;
+  transition: 1s;
+}
+
+#contact .info-img:hover {
+  transform: scale(1.01);
 }
 
 #contact .text-left {
@@ -632,4 +638,97 @@ footer.footer {
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #fed975), color-stop(14%, #fa7e1e), color-stop(28%, #d62977), color-stop(80%, #962fbf), color-stop(95%, #4f5ad5), color-stop(99%, #4f5ad5));
   background: linear-gradient(45deg, #fed975 0%, #fa7e1e 14%, #d62977 28%, #962fbf 80%, #4f5ad5 95%, #4f5ad5 99%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed975', endColorstr='#4f5ad5', GradientType=1 );
+}
+
+#quiensoy .contact-description {
+  padding: 0;
+}
+
+#quiensoy .black-cover {
+  background: #000000d5;
+  padding: 6em 2em 2em 2em;
+  height: 100vh;
+}
+
+#quiensoy .info-img {
+  border-radius: 50px;
+  transition: 1s;
+}
+
+#quiensoy .info-img:hover {
+  transform: scale(1.01);
+}
+
+#quiensoy .card {
+  border-radius: 9px;
+  transition: .5s;
+}
+
+#quiensoy .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 11px 0px #00000052;
+}
+
+#quiensoy .card .card-footer {
+  border-radius: 0 0 9px 9px;
+  padding: 0;
+}
+
+#quiensoy .text-left {
+  font-family: Inria;
+  line-height: 35px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#quiensoy .button {
+  padding: 1em;
+  justify-content: center;
+  display: flex;
+  color: white;
+  border-radius: 0 0 9px 9px;
+  text-decoration: none;
+}
+
+#quiensoy .button:hover {
+  text-decoration: none !important;
+}
+
+#quiensoy .button-whatsapp {
+  background: #008051;
+  background: -webkit-gradient(left bottom, right top, color-stop(38%, #008051), color-stop(74%, #005032), color-stop(99%, #002f1d), color-stop(100%, #002e1c));
+  background: linear-gradient(45deg, #008051 38%, #005032 74%, #002f1d 99%, #002e1c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008051', endColorstr='#002e1c', GradientType=1 );
+}
+
+#quiensoy .button-whatsapp:hover {
+  background: #0c4631;
+}
+
+#quiensoy .button-gmail {
+  background: #b60000;
+  background: linear-gradient(90deg, #b60000 0%, #540000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b60000",endColorstr="#540000",GradientType=1);
+}
+
+#quiensoy .button-gmail:hover {
+  background: #700000;
+}
+
+#quiensoy .button-instagram {
+  background: #fed975;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #fed975), color-stop(14%, #fa7e1e), color-stop(28%, #d62977), color-stop(80%, #962fbf), color-stop(95%, #4f5ad5), color-stop(99%, #4f5ad5));
+  background: linear-gradient(135deg, #fed975 0%, #fa7e1e 14%, #d62977 28%, #962fbf 80%, #4f5ad5 95%, #4f5ad5 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed975', endColorstr='#4f5ad5', GradientType=1 );
+}
+
+#quiensoy .button-instagram:hover {
+  background: #fed975;
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #fed975), color-stop(14%, #fa7e1e), color-stop(28%, #d62977), color-stop(80%, #962fbf), color-stop(95%, #4f5ad5), color-stop(99%, #4f5ad5));
+  background: linear-gradient(45deg, #fed975 0%, #fa7e1e 14%, #d62977 28%, #962fbf 80%, #4f5ad5 95%, #4f5ad5 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed975', endColorstr='#4f5ad5', GradientType=1 );
+}
+
+#baguetteBox-overlay .full-image {
+  background-color: black !important;
 }

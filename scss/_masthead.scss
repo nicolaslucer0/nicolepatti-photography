@@ -1,9 +1,6 @@
 .header-home {
   padding: 1em !important;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.637),
-    transparent
-  ) !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.637), transparent) !important;
 
   .nav-link-home {
     font-weight: lighter;
@@ -12,18 +9,18 @@
   .nav-link-home {
     letter-spacing: 0;
     transition: 0.5s;
-    padding-right: 10px;
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
+    margin-right: 20px;
+    font-size: 19px;
   }
 
   .nav-link-home:hover {
     font-weight: bold;
   }
 
-  .nav-link-home:after,
-  .nav-link-home:before {
+  .nav-link-home:after {
     backface-visibility: hidden;
-    border: 1px solid rgba(#fff, 0);
+    border-bottom: 1px solid rgba(#fff, 0);
     bottom: 0px;
     content: " ";
     display: block;
@@ -58,18 +55,18 @@
   .nav-link-rest {
     letter-spacing: 0;
     transition: 0.5s;
-    padding-right: 10px;
-    font-family: 'Quicksand';
+    margin-right: 20px;
+    font-size: 19px;
+    font-family: "Quicksand";
   }
 
   .nav-link-rest:hover {
     font-weight: bold;
   }
 
-  .nav-link-rest:after,
-  .nav-link-rest:before {
+  .nav-link-rest:after {
     backface-visibility: hidden;
-    border: 1px solid rgba(#000, 0);
+    border-bottom: 1px solid black;
     bottom: 0px;
     content: " ";
     display: block;
@@ -99,7 +96,7 @@ header.masthead {
   align-items: center;
   position: relative;
   background-color: $gray-800;
-  background: url("../img/landscape.jpg") no-repeat center center;
+  background: url("../img/galeria/2/22.JPG") no-repeat center center;
   @include background-cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -127,7 +124,7 @@ header.masthead {
 }
 
 .logo-home {
-  width: 30em;
+  width: 20em;
   margin-bottom: 1em;
 }
 
@@ -139,63 +136,61 @@ header.masthead {
   position: absolute;
   height: 18vh;
   width: 100vw;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  backdrop-filter: blur(15px);
+  box-shadow: none;
   z-index: 1;
+  border: none;
+  border-radius: 0;
 }
 
-.main-col{
+.main-col {
   padding: 2em 2em 0 2em;
 }
 
 .blur-name {
   align-items: center;
-  border: 1px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, 0.5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  border: none;
+  border: 1px solid #8080801a;
+  box-shadow: 0px 2px 7px 0px #00000033;
+  border-radius: 30px;
+  transition: 0.5s;
+  backdrop-filter: blur(7px);
+  background: #00000059;
 }
 
 .blur-name:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px #427388;
+  align-items: center;
+  border: none;
+  border: 1px solid white;
+  box-shadow: 0px 2px 7px 0px #00000033;
+  border-radius: 30px;
+  transition: 0.5s;
 }
 
 .btn-1 {
   background: transparent;
   font-weight: 100;
-  color: white;
-  border: 1px solid darken(pink, 5%);
+  background: #ffffff38;
+   color: black !important;
   margin-top: 2em;
   &:hover {
-    background: darken(pink, 5% );
+    background: #ffffff60;
   }
 }
 
 .btn {
   cursor: pointer;
   // display: block;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 45px;
   margin: 0 0 2em;
-  max-width: 160px; 
+  max-width: 160px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%; 
-  
-  @media(min-width: 600px) {
-      
+  width: 100%;
+
+  @media (min-width: 600px) {
     margin: 0 1em 2em;
   }
-  
 }
