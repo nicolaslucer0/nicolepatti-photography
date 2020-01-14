@@ -169,11 +169,12 @@ header.masthead {
 .btn-1 {
   background: transparent;
   font-weight: 100;
-  background: #ffffff38;
+  background: #ffffff90;
    color: black !important;
   margin-top: 2em;
+  padding: 0;
   &:hover {
-    background: #ffffff60;
+    background: #ffffffca;
   }
 }
 

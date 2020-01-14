@@ -160,7 +160,7 @@ header.masthead .subtitle {
 }
 
 .logo-home {
-  width: 25em;
+  width: 20em;
   margin-bottom: 1em;
 }
 
@@ -206,13 +206,14 @@ header.masthead .subtitle {
 .btn-1 {
   background: transparent;
   font-weight: 100;
-  background: #ffffff38;
+  background: #ffffff90;
   color: black !important;
   margin-top: 2em;
+  padding: 0;
 }
 
 .btn-1:hover {
-  background: #ffffff60;
+  background: #ffffffca;
 }
 
 .btn {
