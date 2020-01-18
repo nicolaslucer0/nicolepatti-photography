@@ -1,4 +1,69 @@
-footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  small{
+    color: #ffffffab;
+  }
+  a{
+    color: white;
+    font-weight: bolder;
+    &:hover {
+      font-weight: bolder;
+      color: rgb(0, 119, 128);
+    }
+  }
+}
+
+
+#fixed-footer {
+  position: absolute;
+  bottom: initial;
+  width: 100%;
+  small{
+    color: black;
+  }
+  a{
+    color: black;
+    font-weight: bolder;
+    &:hover {
+      font-weight: bolder;
+      color: rgb(0, 119, 128);
+    }
+  }
+}
+
+#fixed-footer-black {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  small{
+    color: black;
+  }
+  a{
+    color: black;
+    font-weight: bolder;
+    &:hover {
+      font-weight: bolder;
+      color: rgb(0, 119, 128);
+    }
+  }
+}
+
+
+#general-footer{
+  position: absolute;
+  bottom: initial;
+  width: 100%;
+  small{
+    color: black;
+  }
+  a{
+    color: black;
+    font-weight: bolder;
+    &:hover {
+      font-weight: bolder;
+      color: rgb(0, 119, 128);
+    }
+  }
 }

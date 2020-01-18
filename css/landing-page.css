@@ -298,9 +298,84 @@ header.masthead .subtitle {
   opacity: 0.3;
 }
 
-footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#sticky-footer small {
+  color: #ffffffab;
+}
+
+#sticky-footer a {
+  color: white;
+  font-weight: bolder;
+}
+
+#sticky-footer a:hover {
+  font-weight: bolder;
+  color: #007780;
+}
+
+#fixed-footer {
+  position: absolute;
+  bottom: initial;
+  width: 100%;
+}
+
+#fixed-footer small {
+  color: black;
+}
+
+#fixed-footer a {
+  color: black;
+  font-weight: bolder;
+}
+
+#fixed-footer a:hover {
+  font-weight: bolder;
+  color: #007780;
+}
+
+#fixed-footer-black {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#fixed-footer-black small {
+  color: black;
+}
+
+#fixed-footer-black a {
+  color: black;
+  font-weight: bolder;
+}
+
+#fixed-footer-black a:hover {
+  font-weight: bolder;
+  color: #007780;
+}
+
+#general-footer {
+  position: absolute;
+  bottom: initial;
+  width: 100%;
+}
+
+#general-footer small {
+  color: black;
+}
+
+#general-footer a {
+  color: black;
+  font-weight: bolder;
+}
+
+#general-footer a:hover {
+  font-weight: bolder;
+  color: #007780;
 }
 
 .flex-gallery .container {
@@ -578,7 +653,7 @@ footer.footer {
 
 #contact .info-img {
   border-radius: 50px;
-  transition: 1s;
+  transition: .3s;
 }
 
 #contact .info-img:hover {

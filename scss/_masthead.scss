@@ -1,6 +1,9 @@
 .header-home {
   padding: 1em !important;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.637), transparent) !important;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.637),
+    transparent
+  ) !important;
 
   .nav-link-home {
     font-weight: lighter;
@@ -43,6 +46,8 @@
     top: 0;
     width: 70%;
   }
+
+  
 }
 
 .header-rest {
@@ -170,7 +175,7 @@ header.masthead {
   background: transparent;
   font-weight: 100;
   background: #ffffff90;
-   color: black !important;
+  color: black !important;
   margin-top: 2em;
   padding: 0;
   &:hover {
